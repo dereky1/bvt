@@ -1,0 +1,41 @@
+.parent{
+    display: flex;
+    justify-content: center;
+    height: 50vh;
+}
+
+.child-one, .child-two, .child-three, .child-four, .child-five, .child-six, .child-seven, .child-eight, .child-nine {
+    font-size: 100px;
+    border: 5px solid black;
+    border-radius: 50px;
+    text-align: center;
+    margin: 10px;
+}
+
+.child-one{
+    background-color: red;
+}
+.child-two{
+    background-color: orange;
+}
+.child-three{
+    background-color: yellow;
+}
+.child-four{
+    background-color: greenyellow;
+}
+.child-five{
+    background-color: green;
+}
+.child-six{
+    background-color: blue;
+}
+.child-seven{
+    background-color: indigo;
+}
+.child-eight{
+    background-color: blueviolet;
+}
+.child-nine{
+    background-color: violet;
+}
