@@ -1,0 +1,13 @@
+1. Who performs a code review?
+Someone other than the author(s) of a piece of code.
+
+2. What are 4 important things to do in a code review? (see second link at bottom of page in bold)
+- Review every line of code being asked to review
+- Look at the context of the code to see if it is within scope and does what it is required to do
+- Make sure you're improving code health
+- Compliment developers on good things that they do
+ 
+3. When performing a code review, most people create a checklist of what they will be looking for in the code. Please type at least 3 things you will be looking for in the Login UI. (third link is an example of a code review checklist for a more complicated project, but you can pick and choose from the things on this list that are more relevant to the Login UI.)
+- Embedded or inline CSS: Avoid at all cost embeding CSS in <style> tags or using inline CSS
+- Stylelint: All CSS or SCSS files are without any errors.
+- Mobile Browsers: All pages were tested on all current mobile browsers (Native browser, Chrome, Safari...)
