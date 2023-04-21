@@ -1,0 +1,38 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    width:100vw;
+    background-color:aliceblue;
+}
+
+.ui-container{
+    background-color: white;
+    border: 0;
+    border-radius: 15px;
+    display: flex;
+    flex-flow: column wrap;
+    padding: 25px 55px;
+    align-items: center;
+    row-gap: 15px;
+}
+
+#pass, #user {
+    border: 0;
+    margin: 10px; 
+    border-bottom: 1px solid black;
+}
+
+#pass::placeholder, #user::placeholder{
+    color:lightgray;
+}
+
+input[type="submit"] {
+    background-color: dodgerblue;
+    padding: 10px 90px;
+    width: 100%;
+    border: 0;
+    border-radius: 15px;
+    color: white;
+}
