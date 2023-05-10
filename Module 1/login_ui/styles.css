@@ -4,6 +4,8 @@ body{
     width:100vw;
     background-color:f5f5f5;
     font-family: sans-serif;
+    align-items: center;
+    justify-content: center;
 }
 
 .ui-container{
@@ -11,7 +13,6 @@ body{
     border: 0;
     border-radius: 15px;
     box-shadow: 10px 10px 10px 10px rgba(148,148,148, .20);
-    margin:auto;
     display: flex;
     flex-flow: column;
     width:50%;
