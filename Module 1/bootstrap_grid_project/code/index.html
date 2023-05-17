@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet">
+    <title>eMail</title>
+</head>
+<body>
+    <div class="container-fluid vh-100">
+        
+        <!--top bar-->
+        <div id="top-bar" class="row d-flex justify-content-between align-items-center">
+
+            <!--hamburger menu-->
+            <div class="col-1 d-flex justify-content-center">
+                <button id="hamburger" type="button" class="btn btn-outline-warning">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                        <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path>
+                      </svg>
+                </button>
+            </div>
+
+
+            <!--search bar-->
+            <div class="col-8 col-sm-8 col-md-6 col-lg-6 rounded-4 flex-nowrap">
+                <input id="search-bar" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">                    
+            </div>
+        
+            <!--profile-->
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person col-1" viewBox="0 0 16 16">
+                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+              </svg>
+
+        </div>
+
+        <!--email-->
+        <div id="email-content" class="row d-flex">
+
+            <!--inbox bar-->
+            <div id="action-bar" class="col col-12 col-sm-12 col-md-3 col-lg-2">
+
+                <div class="row d-flex justify-content-between">
+
+                    <!--action bar when in desktop mode-->
+                    <div id="email-actions" class="col d-none d-md-block col-12">
+
+                        <div class="row d-flex justify-content-between">
+
+                            <!--back arrow-->
+                            <div class="col-1">
+                                <button id="back-button" type="button" class="btn btn-light col-md-2 col-lg-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <!--reply, reply-all, forward, archive, delete, mark-as-spam-->
+                            <div class="col-10">
+                                <button type="button" class="btn btn-light col-12">Reply</button>
+                                <button type="button" class="btn btn-light col-12">Reply-All</button>
+                                <button type="button" class="btn btn-light col-12">Forward</button>
+                                <button type="button" class="btn btn-light col-12">Mark-as-Spam</button>
+                                <button type="button" class="btn btn-light col-12">Archive</button>
+                                <button type="button" class="btn btn-light col-12">Delete</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!--inbox options-->
+                    <div class="horizontal-scroll row flex-nowrap flex-md-wrap flex-lg-wrap">
+                        <button type="button" class="btn btn-light col-3 col-sm-3 col-md-12 col-lg-12">Inbox</button>
+                        <button type="button" class="btn btn-light col-3 col-sm-3 col-md-12 col-lg-12">Starred</button>
+                        <button type="button" class="btn btn-light col-3 col-sm-3 col-md-12 col-lg-12">Important</button>
+                        <button type="button" class="btn btn-light col-3 col-sm-3 col-md-12 col-lg-12">Sent</button>
+                        <button type="button" class="btn btn-light col-3 col-sm-3 col-md-12 col-lg-12">Drafts</button>
+                        <button type="button" class="btn btn-light col-3 col-sm-3 col-md-12 col-lg-12">Spam</button>
+                        <button type="button" class="btn btn-light col-3 col-sm-3 col-md-12 col-lg-12">Trash</button>
+                    </div>
+
+                    <!--bottom bar when in desktop mode-->
+                    <div id="bottom-bar-desktop" class="row d-none d-md-block col-11 justfy-content-center">
+
+                        <!--back arrow-->
+                        <div class="col-12">
+                            <button type="button" class="btn btn-light col-12">Compose</button>
+                            <button type="button" class="btn btn-light col-12">Profile</button>
+                            <button type="button" class="btn btn-light col-12">Settings</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!--Email box-->
+            <div id="email-box" class="col-12 col-sm-12 col-md-9 col-lg-4 vertical-scroll">
+                <div class="card">
+                    <button type="button" class="btn btn-light col-12">Inbox</button>
+                </div>
+                <div class="card">
+                    <button type="button" class="btn btn-light col-12">Inbox</button>
+                </div>
+                <div class="card">
+                    <button type="button" class="btn btn-light col-12">Inbox</button>
+                </div>
+                <div class="card">
+                    <button type="button" class="btn btn-light col-12">Inbox</button>
+                </div>
+                <div class="card">
+                    <button type="button" class="btn btn-light col-12">Inbox</button>
+                </div>
+                <div class="card">
+                    <button type="button" class="btn btn-light col-12">Inbox</button>
+                </div>
+                <div class="card">
+                    <button type="button" class="btn btn-light col-12">Inbox</button>
+                </div>
+                <div class="card">
+                    <button type="button" class="btn btn-light col-12">Inbox</button>
+                </div>
+                <div class="card">
+                    <button type="button" class="btn btn-light col-12">Inbox</button>
+                </div>
+                <div class="card">
+                    <button type="button" class="btn btn-light col-12">Inbox</button>
+                </div>
+                <div class="card">
+                    <button type="button" class="btn btn-light col-12">Inbox</button>
+                </div>
+                <div class="card">
+                    <button type="button" class="btn btn-light col-12">Inbox</button>
+                </div>
+                <div class="card">
+                    <button type="button" class="btn btn-light col-12">Inbox</button>
+                </div>
+                <div class="card">
+                    <button type="button" class="btn btn-light col-12">Inbox</button>
+                </div>
+                <div class="card">
+                    <button type="button" class="btn btn-light col-12">Inbox</button>
+                </div>
+                <div class="card">
+                    <button type="button" class="btn btn-light col-12">Inbox</button>
+                </div>
+                <div class="card">
+                    <button type="button" class="btn btn-light col-12">Inbox</button>
+                </div>
+                <div class="card">
+                    <button type="button" class="btn btn-light col-12">Inbox</button>
+                </div>
+                <div class="card">
+                    <button type="button" class="btn btn-light col-12">Inbox</button>
+                </div>
+                <div class="card">
+                    <button type="button" class="btn btn-light col-12">Inbox</button>
+                </div>
+                <div class="card">
+                    <button type="button" class="btn btn-light col-12">Inbox</button>
+                </div>
+                <div class="card">
+                    <button type="button" class="btn btn-light col-12">Inbox</button>
+                </div>
+                <div class="card">
+                    <button type="button" class="btn btn-light col-12">Inbox</button>
+                </div>
+                <div class="card">
+                    <button type="button" class="btn btn-light col-12">Inbox</button>
+                </div>
+                <div class="card">
+                    <button type="button" class="btn btn-light col-12">Inbox</button>
+                </div>
+                <div class="card">
+                    <button type="button" class="btn btn-light col-12">Inbox</button>
+                </div>
+                <div class="card">
+                    <button type="button" class="btn btn-light col-12">Inbox</button>
+                </div>
+                <div class="card">
+                    <button type="button" class="btn btn-light col-12">Inbox</button>
+                </div>
+                <div class="card">
+                    <button type="button" class="btn btn-light col-12">Inbox</button>
+                </div>
+                <div class="card">
+                    <button type="button" class="btn btn-light col-12">Inbox</button>
+                </div>
+            </div>
+
+            <!--email content-->
+            <div id="email-message" class="d-none d-lg-block col-lg-6 vertical-scroll">
+
+                <!--email subject line-->
+                <div class="row d-flex align-items-center">
+
+                    <!--email subject-->
+                    <div class="col-11">
+                        <h3>Subject: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, distinctio? Accusamus cupiditate exercitationem blanditiis distinctio minima magni eaque? Consectetur eligendi velit neque. Consectetur vitae ipsam, quasi quod inventore est saepe ratione cupiditate harum, aperiam assumenda quidem expedita voluptatum possimus?</h3>
+                    </div>
+
+                    <!--print button-->
+                    <div class="col-1">
+                        <button type="button" class="btn btn-outline-warning">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-printer" viewBox="0 0 16 16">
+                                <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/>
+                                <path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z"/>
+                              </svg>
+                        </button>
+                    </div>
+
+                </div>
+
+                <!--email header-->
+                <div class="row d-flex align-items-center">
+
+                    <!--sender profile picture-->
+                    <div class="col-1 d-flex justify-content-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                          </svg>
+                    </div>
+
+                    <!--header information-->
+                    <div class="col-8 ">
+                        <h4>Sender, Header Information, Date Time</h4>
+                    </div>
+
+                    <!--Fav Button-->
+                    <div class="col-1 d-flex justify-content-center">
+                        <button type="button" class="btn btn-outline-warning">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                            <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!--Reply button-->
+                    <div class="col-1 d-flex justify-content-center">
+                        <button type="button" class="btn btn-light">Reply</button>
+                    </div>
+
+                    <!--More menu button-->
+                    <div class="col-1 d-flex justify-content-center">
+                        <button type="button" class="btn btn-outline-warning">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path>
+                              </svg>
+                        </button>
+                    </div>
+
+                </div>
+
+                <!--email content-->
+                <div class="row d-flex justify-content-center">
+
+                    <!--email body-->
+                    <div class="card col-11">
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit dolorem corporis hic voluptas quis aliquid iste unde dolore amet quisquam asperiores soluta, et tempora quo explicabo! Quam officia dicta labore. Non perferendis, at cupiditate officiis saepe beatae, repudiandae architecto quae eveniet aut molestiae repellat itaque aperiam, aspernatur cumque harum perspiciatis assumenda a deleniti libero rerum. Vel sapiente placeat sequi rem laudantium delectus beatae libero suscipit magni nostrum fugit consectetur ducimus eligendi iusto deleniti in provident, accusamus asperiores, voluptatem eius nihil! Mollitia placeat reprehenderit ex nam fuga vero ab ut repellat! Aut laboriosam quam consequuntur earum totam id amet perspiciatis doloremque! Rerum odit eligendi voluptatum mollitia officiis incidunt nisi earum perspiciatis nihil placeat minima officia quod eius impedit ipsa quae cum quos ea ipsam, reprehenderit est modi aliquid sapiente dicta. Illo corrupti, dolores ea natus vero ipsam tempore a minima exercitationem quod iste consectetur praesentium laborum itaque autem facere similique magnam pariatur suscipit sed. Iure dolorum odit veritatis commodi quibusdam, perspiciatis mollitia autem nulla ea, tenetur asperiores! Officiis facilis eos excepturi repudiandae ab, unde voluptate aliquid explicabo libero molestias enim ipsum provident magni, fuga repellat? Deserunt aperiam eum ducimus at quaerat dolorem quisquam similique aliquid laborum beatae iusto facere cumque consequatur, culpa esse corrupti a et praesentium deleniti maxime dolorum minima. Assumenda, soluta aut! Id dolorum quis laborum necessitatibus consectetur nam velit non ea assumenda dolor praesentium distinctio, vero, quo ratione quas voluptate nihil aliquam sit odio? Voluptatum sequi earum, enim voluptates perspiciatis, reprehenderit nihil eum, magni possimus cumque quasi inventore cum. Iusto pariatur exercitationem deserunt tempora. Eveniet mollitia illo nulla assumenda nihil non voluptatibus, esse omnis reprehenderit. Laborum minus quae dolores possimus facere expedita doloremque, recusandae porro impedit, magni voluptate sapiente asperiores. Quo corporis culpa dolorem est minima aspernatur perspiciatis maiores beatae quaerat? Molestias esse est cum recusandae veritatis voluptas, id vitae enim nisi unde cupiditate facere exercitationem libero nemo tempora velit, ea quia sunt perspiciatis, laboriosam accusantium at porro cumque saepe. Fugiat natus ex rem, et iusto maiores quas porro delectus at! Minima tempore architecto expedita ad hic nam maiores, pariatur ullam adipisci sequi blanditiis possimus dolor similique est eveniet consequuntur eos officiis id vitae ducimus eum quibusdam accusantium recusandae repellendus. Veniam fuga explicabo natus voluptates tempora asperiores aliquam nihil odit, ex reiciendis odio, dignissimos atque officia, libero rem. Reiciendis, sed autem illo molestias a aut excepturi at voluptatum? Repudiandae hic autem quo ducimus, facere enim non earum nemo nesciunt obcaecati eligendi ipsum, ipsam dignissimos quia odio vel, ad nisi reprehenderit quae. Esse id minus ipsam ullam praesentium corrupti iusto facere, consequuntur dolor. Porro aliquam maxime quisquam dolor facere laborum doloremque ipsa totam sunt, provident quidem delectus consectetur iusto inventore quo eum et beatae consequatur reprehenderit aspernatur ipsum aut. Tempore cupiditate quibusdam vitae blanditiis sequi dolorum praesentium ipsam a enim, sunt, non ducimus tenetur nulla ratione corrupti. Dolorum nam quasi quas libero architecto delectus atque harum aliquid eos eligendi vero molestias qui optio facere explicabo amet quo, porro totam vitae obcaecati. Ab placeat exercitationem quibusdam similique sit iste rem ipsum nisi corrupti quia vel ea possimus nihil culpa perspiciatis, atque quae explicabo doloremque modi magni adipisci. Illo magni repellat eveniet mollitia, nihil voluptate molestias aut laborum numquam corporis adipisci odio aliquid quam laudantium accusantium impedit quos nisi ad vel dignissimos maiores ipsam blanditiis ex. Esse mollitia consectetur cumque quasi. Dignissimos dolorum doloribus voluptatem aspernatur maiores quaerat ratione quibusdam accusamus molestiae. Consequuntur assumenda minus laborum architecto ipsa soluta iste nobis incidunt tempora aspernatur labore consequatur alias eligendi eum, non eaque saepe eius magni quasi quibusdam similique maxime harum mollitia ea! Quidem magnam libero nisi velit, quia rerum fugiat, error at obcaecati natus commodi itaque doloribus atque nulla dolorem veritatis ea tempora voluptatum illo ipsa, in fuga eos sunt veniam. Porro hic, eum modi dolore quaerat magni perspiciatis voluptas adipisci tempore, expedita eos aut omnis ducimus, ad libero reiciendis. Tempore, nihil dolores delectus ducimus iure molestias placeat doloremque sequi ea aperiam quis, et quae fugit in. Accusamus cupiditate perferendis obcaecati atque inventore pariatur consectetur esse magni recusandae iste. Ducimus, laborum nulla! Ut minus, fugiat, sint in voluptas, dignissimos vel alias pariatur quia earum nulla deleniti harum sed itaque? Quidem ullam ducimus, sint quas laudantium dolore quasi. Laudantium earum saepe necessitatibus cupiditate aliquam unde incidunt, voluptas suscipit sed vel doloribus laborum culpa ex, eaque esse officiis reprehenderit aut eum voluptatem dolorem odit odio? Quasi rem ducimus, iusto architecto minus aut impedit blanditiis dignissimos quis maxime earum officiis nihil provident, veritatis commodi id, tempora deleniti dolore? Nam saepe exercitationem excepturi, adipisci cumque ea vitae repellendus, laboriosam quasi vel assumenda quo. Perspiciatis aliquam natus cumque? Iusto provident cupiditate dolorem minima, neque fugiat atque sunt necessitatibus perspiciatis praesentium excepturi voluptatem, eum architecto ullam, doloremque beatae animi corporis ipsam. Vitae non accusantium alias architecto, ipsum quasi, hic ullam nesciunt inventore facere aperiam corrupti harum eius minima aliquam modi adipisci asperiores? Maxime reprehenderit laborum quas dignissimos ex voluptate illum rem repudiandae aspernatur molestias cumque, magni consequatur, aliquam doloribus? Officiis ipsam rem ipsa atque earum accusantium? Rerum, ullam id recusandae tempora aut velit voluptatibus soluta et ipsam nemo alias doloribus. Officia cum dolor saepe incidunt inventore libero adipisci molestias eum ratione ea culpa maxime quae distinctio, repellendus velit earum repellat nobis sit illum rerum laudantium placeat hic. Enim vero id dolor nisi dolorem ad ut praesentium quaerat reiciendis ipsum earum dolores consequuntur repudiandae unde molestias eius, totam laudantium doloribus facilis voluptatibus ratione. Exercitationem necessitatibus repellat iusto porro reprehenderit quasi itaque ad expedita odit incidunt blanditiis dicta nesciunt, asperiores obcaecati quisquam quae cum ratione maiores sint doloremque mollitia. Corporis consequuntur nobis iure ipsum omnis quo itaque exercitationem fugit voluptatibus reiciendis iusto maxime corrupti culpa magni minima accusantium, laborum optio asperiores amet est nisi perferendis repellendus similique cumque. Qui, dignissimos, deserunt labore omnis eveniet dolores incidunt explicabo ipsam, consectetur beatae mollitia voluptatibus rerum rem quasi? Quod in ex autem tenetur tempora recusandae adipisci laborum laudantium minima, deleniti rem vero enim provident ipsam vitae? Ex fugiat nisi temporibus dignissimos aliquid perspiciatis numquam reprehenderit hic repellendus saepe iure harum excepturi ipsam, fuga repudiandae tenetur neque quasi cumque voluptates vel! Doloremque atque hic dolorem, dignissimos, eum aliquam culpa odio beatae natus impedit voluptas aperiam similique! Magni earum aliquid ab accusamus ducimus ratione reprehenderit, deserunt quasi eos repellendus quisquam necessitatibus, assumenda cumque quos illo hic rerum officiis veritatis iusto vero eum tempora delectus. Magni, beatae sed. Omnis non excepturi quia, ad atque hic illo, animi explicabo quasi repudiandae, consectetur vero ab ea recusandae. Ad ipsam doloribus eveniet repudiandae asperiores eos. Asperiores sed ullam, excepturi sint cumque voluptate exercitationem nam. Harum voluptatibus quas, porro consequatur inventore vel temporibus eligendi perferendis cumque. Culpa temporibus porro quasi maiores quam nostrum quisquam dolor? Tenetur nesciunt nisi at possimus dolorum accusantium eum ad ipsam illo, eligendi cum sunt! Optio reprehenderit, repellat amet voluptatibus eum, maxime, deleniti itaque minima ipsam inventore nihil ipsum aliquam nesciunt quasi dicta blanditiis explicabo ab excepturi! Repellendus pariatur itaque nihil ab eaque asperiores tempore sapiente est deleniti iure ipsum illo voluptatem nulla aliquid, laborum similique eos, repudiandae ullam ducimus et modi adipisci? In, fugit. Labore est non provident, et molestiae dolorem, dicta magnam consequuntur doloribus aliquam perspiciatis, a quo iste? Itaque odio tenetur aliquid. Dolorum amet deleniti possimus aut nostrum nisi quam quos, quasi culpa?
+                            </p>
+                    </div>
+
+                </div>
+
+                <!--email actions-->
+                <div class="row d-flex justify-content-evenly">
+
+                    <!--reply button-->
+                    <button type="button" class="btn btn-outline-primary col-4">Reply</button>
+
+                    <!--forward button-->
+                    <button type="button" class="btn btn-outline-primary col-4">Forward</button>
+
+                </div>
+
+            </div>
+
+        </div>    
+        <!--bottom bar-->
+        <div id="bottom-bar" class="row d-md-none d-flex justify-content-evenly align-items-center">
+
+            <!--compose button-->
+            <button type="button" class="btn btn-outline-primary col-3 col-sm-3 col-md-3 col-lg-2">Profile</button>
+            
+            <!--Settings-->
+            <button type="button" class="btn btn-outline-primary col-3 col-sm-3 col-md-3 col-lg-2">Compose</button>
+        
+            <!--profile-->
+            <button type="button" class="btn btn-outline-primary col-3 col-sm-3 col-md-3 col-lg-2">Settings</button>
+
+        </div>
+        
+    </div>
+          
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>
