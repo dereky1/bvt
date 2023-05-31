@@ -3,66 +3,61 @@ html, body{
     width: 100vw;
     min-height: 400px;
     min-width: 400px;
-    background-color: rgb(182, 182, 182);
 }
-
-/* visualizations
-.row{
-    border: 2px dotted aqua;
-}
-.col{
-    border: 1px solid red;
-}
-*/
 
 #action-bar, #email-message{
     background-color: rgb(233, 233, 233);
 }
 
+.btn, #search-bar{
+    color:rgb(138, 43, 226);
+    height:4vh;
+}
 
 .horizontal-scroll {
     background-color: rgb(233, 233, 233);
     padding:1px;
 }
 
-#top-bar, #bottom-bar{
+#bottom-bar{
     height: 5vh;
     max-height: 5vh;
 }
 
-#email-box, #email-message{
-    height: 95vh;
-    max-height: 95vh;
+#top-bar {
+    height: 8vh;
+    max-height: 8vh;
 }
 
-#top-bar, #bottom-bar, #hamburger, #bottom-bar-desktop{
+#email-box, #email-message{
+    height: 92vh;
+    max-height: 92vh;
+}
+
+#top-bar, #bottom-bar, #hamburger, #bottom-bar-desktop, #top-profile-btn{
     background-color: rgb(138, 43, 226);
     color: white;
 }
 
-.btn, #search-bar{
-    background-color: rgb(233, 233, 233);
-    color:rgb(138, 43, 226);
-    border-radius: 25px;
-    height:4vh;
+#search-bar {
+    background-color: white;
 }
 
-.btn-outline-primary{
-    border-color: rgb(138, 43, 226);
+.btn-light, .btn-outline-warning, .btn-outline-secondary, .card{
+    border: none; 
 }
 
-.btn-light, .btn-outline-warning{
-    border: none;
-    border-radius: 5px;
-}
-
-#search-bar::placeholder{
+#search-bar::placeholder, .offcanvas-header, .offcanvas-footer{
     text-align: center;
     color:rgb(138, 43, 226);
 }
 
+#bottom-bar > .btn {
+    background-color: rgb(233, 233, 233);
+}
+
 .btn:hover, .btn:focus, .btn:active{
-    background-color: rgba(176, 117, 231, 0.74);
+    background-color: rgb(202, 158, 243);
     color: white;
 }
 
@@ -82,23 +77,17 @@ html, body{
     height: 0;
 }
 
-.vertical-scroll > .btn {
-    margin: 10px 0 10px 0;
-    border-radius: 10px;
-}
-
-
-#email-box, #email-actions, #back-button{
+#email-actions, #back-button{
     background-color: rgb(182, 182, 182);
 }
 
 #email-actions{
     overflow-x: hidden;
-    padding: 10px;
     width: 17vw;
 }
 
 #bottom-bar-desktop{
+    margin: 7px;
     padding: 10px;
 }
 
@@ -106,10 +95,41 @@ html, body{
     border-radius: 0;
 }
 
-.email-list-item{
-    background-color: rgb(182, 182, 182);
+/* offcanvas */
+.offcanvas-body{
+    background-color: rgb(138, 43, 226);
+    color:white;
+}
 
-    padding: 5px;
+#compose-Offcanvas, #compose-Offcanvas-LG {
+    height: 50vh;
+}
+
+#offcanvas-Actions{
+    background-color: rgb(182, 182, 182);
+    margin: 4vh;
+    height: 200px;
+}
+
+#email-body-reply{
+    background-color: rgb(233, 233, 233);
+}
+
+h1{
+    font-size: xx-large;
+}
+
+img{
+    border: 5px solid rgba(176, 117, 231, 0.74);
+}
+
+.horizontal-hide{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.space {
+    height:2vh;
 }
 
 
@@ -117,8 +137,8 @@ html, body{
 @media (max-width:768px){
 
     #email-box, #email-message{
-        height: 85vh;
-        max-height: 85vh;
+        height: 82vh;
+        max-height: 82vh;
     }
 
     #action-bar {
@@ -136,6 +156,11 @@ html, body{
         border-radius: 10px;
     }
 
+    #offcanvas-Actions{
+        width:100vw;
+        margin: 0;
+    }
+
 }
 
 
@@ -147,4 +172,4 @@ html, body{
 
 }
 
-/*large + display selector*/
+
